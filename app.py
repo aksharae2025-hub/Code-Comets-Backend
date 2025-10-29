@@ -12,6 +12,7 @@ HealthHelper backend (Flask). Features:
 import os
 import requests
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from supabase import create_client
 from dotenv import load_dotenv
 from datetime import datetime
@@ -41,6 +42,7 @@ HF_HEADERS = {"Authorization": f"Bearer {HF_API_TOKEN}"} if HF_API_TOKEN else {}
 
 # ---------- Flask init ----------
 app = Flask(__name__)
+CORS(app)
 
 
 # ---------- Helpers ----------
