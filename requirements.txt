@@ -1,6 +1,6 @@
 flask
 flask-cors
 requests
-supabase
+supabase-py
 python-dotenv
 gunicorn
